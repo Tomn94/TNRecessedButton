@@ -51,12 +51,12 @@ open class RecessedButton: UIButton {
         initSetup()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSetup()
     }
     
-    func initSetup() {
+    private func initSetup() {
         
         /* Respond to touch */
         addTarget(self, action: .tapped, for: .touchUpInside)
@@ -65,8 +65,22 @@ open class RecessedButton: UIButton {
            iOS already adds a background for selected state… */
     }
     
-    @objc func stateChanged() {
+    @objc fileprivate func stateChanged() {
         isSelected = !isSelected
+    }
+    
+}
+
+
+/// Bar button acting as a toggle switch.
+/// Displays a rounded rect background when selected.
+open class RecessedBarButton: UIBarButtonItem {
+    
+    open var button: RecessedButton?
+    
+    public convenience init(button: RecessedButton) {
+        self.init(customView: button)
+        self.button = button
     }
     
 }
