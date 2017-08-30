@@ -18,4 +18,3 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = RecessedBarButton(button: toggleButton)
     }
 }
-

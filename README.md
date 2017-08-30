@@ -15,7 +15,8 @@
 
 ## Description
 
-`RecessedButton` avoids reimplementing all the time a `UIButton` acting like a toggle switch.
+`RecessedButton` avoids reimplementing all the time a `UIButton` acting like a toggle switch.  
+`RecessedBarButton` provides this button for `UIBarButtonItem` in Navigation Bars.
 
 When tapped, it enters *selected* mode, and has a rounded rect background.
 
@@ -43,6 +44,9 @@ button.setImage(aSelectedIcon, for: .selected)
       you can adjust the corner radius when selected */
 button.layer.cornerRadius = 7
 button.clipsToBounds = true
+
+/* 5. To use in a Navigation Bar */
+navigationItem.rightBarButtonItem = RecessedBarButton(button: button)
 ```
 
 #### Using icons
@@ -75,6 +79,7 @@ An Xcode project demonstrating `RecessedButton` is included under [Example](Exam
 
 ## Evolution
 
+- **RecessedBarButton background and icon don't resize on iPhone landscape**
 - Background color could be customized
 - Background corner radius as well
 
