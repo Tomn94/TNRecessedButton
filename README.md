@@ -7,11 +7,10 @@
 [![Licence](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
 
 
-<img src="Example/Example 1 Normal.png" alt="Example 1 normal" height="150px" />
-<img src="Example/Example 1 Selected.png" alt="Example 1 selected" height="150px" />
+<img src="Example/Example 1 Normal.png" alt="Example 1 normal" height="150px" /> <img src="Example/Example 1 Selected.png" alt="Example 1 selected" height="150px" />
 
-![Example 2 normal](Example/Example 2 Normal.png)
-![Example 2 selected](Example/Example 2 Selected.png)
+![Example 2 normal](Example/Example%202%20Normal.png)
+![Example 2 selected](Example/Example%202%20Selected.png)
 
 
 ## Description
