@@ -34,8 +34,39 @@
 
 import UIKit
 
+fileprivate extension Selector {
+    
+    /// Button tapped
+    static let tapped = #selector(RecessedButton.stateChanged)
+    
+}
+
+
 /// Button acting as a toggle switch.
 /// Displays a rounded rect background when selected.
 open class RecessedButton: UIButton {
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        initSetup()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initSetup()
+    }
+    
+    func initSetup() {
+        
+        /* Respond to touch */
+        addTarget(self, action: .tapped, for: .touchUpInside)
+        
+        /* Actually no need to do anything else,
+           iOS already adds a background for selected state… */
+    }
+    
+    @objc func stateChanged() {
+        isSelected = !isSelected
+    }
     
 }
