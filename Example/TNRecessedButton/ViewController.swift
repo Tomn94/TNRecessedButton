@@ -12,14 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        /* Add a button as right navigation bar item */
+        let toggleButton = RecessedButton(type: .contactAdd)
+        navigationItem.rightBarButtonItem = RecessedBarButton(button: toggleButton)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
